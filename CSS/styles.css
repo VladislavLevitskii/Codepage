@@ -4,6 +4,7 @@
     --indigodye: #0B4F6C;
     --mainbackground: #0685AE;
     --white: #FBFBFF;
+    --hoverwhite: #E2E2EC;
     --font14: 14px;
     --font16: 16px;
     --font20: 20px;
@@ -29,6 +30,10 @@ a {
 li {
     list-style-type: none;
 }
+
+
+/*                         homepage                                                     */
+
 
 nav > menu {
     padding: 0;
@@ -314,4 +319,80 @@ footer > nav > menu > .footer__nav--line {
     .article__vyuziti--grid > div > img {
         width: 100%;
     }
+}
+
+
+
+/*                           konfigurace                                 */
+
+.body__reversed {
+    background-color: var(--white);
+}
+
+.body__reversed > .navlineheader {
+    background-color: var(--hoverwhite);
+}
+
+.body__reversed > nav > menu > li > .headernav__reversed--kontakt {
+    color: var(--mainbackground);
+}
+
+.body__reversed > header > .header__flex > .hamburgermenu > .reversed__hamburgermenu--line {
+    background-color: var(--mainbackground);
+}
+
+.body__reversed > main > h1 {
+    color: var(--mainbackground);
+}
+
+.body__reversed > main > h2 {
+    color: var(--mainbackground);
+    margin: 10px 24px;
+}
+
+main > .offers {
+    padding: 0;
+}
+
+main > .offers > .offer {
+    margin-bottom: 20px;
+}
+
+main > .offers > .offer > .offer__header {
+    display: flex;
+    background-color: var(--mainbackground);
+    justify-content: space-between;
+    padding: 0 24px;
+}
+
+main > .offers > .offer > .offer__header p {
+    color: var(--white);
+    font-size: var(--font20);
+    font-weight: bolder;
+    margin: 15px 0;
+}
+
+main > .offers > .offer > .offer__header > .offer__header--priceandarrow {
+    display: flex;
+    gap: 30px;
+}
+
+main > .offers > .offer > .offer__structure {
+    display: none;
+    padding: 0 24px;
+    border-bottom: 10px solid var(--mainbackground);
+}
+
+main > .offers > .offer > .showMenu {
+    display: block;
+}
+
+main > .offers > .offer > .offer__structure > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+main > .offers > .offer > .offer__structure > div > p:nth-child(2){
+    text-align: right;
 }
