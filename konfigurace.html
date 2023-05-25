@@ -15,14 +15,14 @@
 <body class="body__reversed">
     <nav>
         <menu>
-            <li><a class="headernav__reversed--kontakt" href="tel:+420 722 134 560"><img src="./Images/Icons/Phone__blue.svg" alt="Phone">+420 722 134 560</a>
+            <li><a class="headernav__reversed--kontakt" href="tel:+420722134560"><img src="./Images/Icons/Phone__blue.svg" alt="Phone">+420 722 134 560</a>
             <li><a class="headernav__reversed--kontakt" href="mailto:info@codepage.cz"><img src="./Images/Icons/Message__blue.svg" alt="Phone">info@codepage.cz</a>
         </menu>
     </nav>
     <div class="navlineheader"></div>
     <header>
         <div class="header__flex">
-            <img src="./Images/Icons/Logo__blue.svg" alt="Logo">
+            <a href="index.html"><img src="./Images/Icons/Logo__blue.svg" alt="Logo"></a>
             <div class="hamburgermenu">
                 <div class="hamburgermenu__line hamburgermenu__line--1 reversed__hamburgermenu--line"></div>
                 <div class="hamburgermenu__line hamburgermenu__line--2 reversed__hamburgermenu--line"></div>
@@ -32,7 +32,7 @@
         <nav class="nav__hamburger">
             <menu>
                 <li><a href="#">Konfigurace PC sestav</a></li>
-                <li><a href="#">Náhradní díly</a></li>
+                <li><a href="náhradnídíly.html">Náhradní díly</a></li>
                 <li><a href="#">Kontakt</a></li>
             </menu>
         </nav>
@@ -40,7 +40,7 @@
     <main>
         <h1>Konfigurace PC sestav</h1>
         <h2>Nejčastěji používané konfigurace:</h2>
-        <article class="offers">
+        <div class="offers">
             <div class="offer">
                 <div class="offer__header offer__header--1">
                     <p>Základ</p>
@@ -203,25 +203,43 @@
                     </div>
                 </div>
             </div>
-        </article>
+        </div>
+        <p>Sestavy lze <span class="texthightlight">libovolně</span> konfigurovat, záleží na <span class="texthightlight">Vašich</span> požadavcích</p>
+        <h2>Operační systémy k instalaci:</h2>
+        <div class="OS">
+            <div class="OS__example">
+                <img src="./Images/Icons/Linux.png" alt="Linux">
+                <p>Linux</p>
+            </div>
+            <div class="OS__example">
+                <img src="./Images/Icons/Win.svg" alt="Windows">
+                <p>Windows 10 (8/7)</p>
+            </div>
+            <div class="OS__example">
+                <img src="./Images/Icons/Ubuntu.svg" alt="Ubuntu">
+                <p>Ubuntu</p>
+            </div>
+        </div>
+        <p>Pouze osobní předání v <span class="texthightlight">Libereckém kraji</span></p>
+        <a href="#" class="button__kontakt">Kontaktovat v případě zájmu</a>
     </main>
     <footer>
         <img src="./Images/Icons/Logo_header--mobile--white.svg" alt="Logo">
         <nav>
             <menu>
-                <li><a href="#">Domovská stránka</a></li>
+                <li><a href="index.html">Domovská stránka</a></li>
                 <li><a href="#">Konfigurace PC sestav</a></li>
-                <li><a href="#">Náhradní díly</a></li>
+                <li><a href="náhradnídíly.html">Náhradní díly</a></li>
                 <li><a href="#">Kontakt</a></li>
-                <div class="footer__nav--line"></div>
+                <li class="footer__nav--line"></li>
                 <li><a href="tel:420722134560"><img src="./Images/Icons/Phone_white.svg" alt="Phone">+420 722 134 560</a></li>
                 <li><a href="mailto:info@codepage.cz"><img src="./Images/Icons/Message_white.svg" alt="Dopis">info@codepage.cz</a></li>
-                <li><a href="#"><img src="./Images/Icons/Facebook - Negative.svg" alt="Logo__facebook">Facebook</a></li>
-                <li><a href="#"><img src="./Images/Icons/Instagram - Negative.svg" alt="Logo__instagram">Instagram</a></li>
+                <li><a href="#"><img src="./Images/Icons/Facebook-Negative.svg" alt="Logo__facebook">Facebook</a></li>
+                <li><a href="#"><img src="./Images/Icons/Instagram-Negative.svg" alt="Logo__instagram">Instagram</a></li>
             </menu>
         </nav>
     </footer>
+    <script src="./JavaScript/hamburger.js"></script>
+    <script src="./JavaScript/konfigurace.js"></script>
 </body>
-<script src="./JavaScript/hamburger.js"></script>
-<script src="./JavaScript/konfigurace.js"></script>
 </html>

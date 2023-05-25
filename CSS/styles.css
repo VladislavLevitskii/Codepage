@@ -20,7 +20,6 @@ html {
 body {
     background-color: var(--mainbackground);
     overflow-x: hidden;
-    box-sizing: border-box;
 }
 
 a {
@@ -35,25 +34,21 @@ li {
 /*                         homepage                                                     */
 
 
-nav > menu {
+body > nav > menu {
     padding: 0;
 }
 
-nav > menu > li {
+body > nav > menu > li {
     font-size: var(--font16);
     margin: 15px 0;
 }
 
-nav > menu > li > a {
+body > nav > menu > li > a {
     color: white;
     display: flex;
     align-items: center;
     gap: 10px;
     justify-content: center;
-}
-
-nav > menu > li > a > img {
-    color: var(--white);
 }
 
 .navlineheader {
@@ -71,6 +66,10 @@ header > .header__flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+header > .header__flex > a > img {
+    display: block;
 }
 
 header > .header__flex > .hamburgermenu {
@@ -115,11 +114,13 @@ header > .nav__hamburger > menu {
     display: flex;
     flex-direction: column;
     margin: 0;
+    padding: 0;
 }
 
 header > .nav__hamburger > menu > li {
     text-align: center;
-    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 header > .nav__hamburger > menu > li:nth-child(2) {
@@ -130,7 +131,8 @@ header > .nav__hamburger > menu > li:nth-child(2) {
 header > .nav__hamburger > menu > li > a {
     color: var(--richblack);
     font-size: var(--font16);
-    padding: 20px 0;
+    padding: 15px 0;
+    width: -webkit-fill-available;
 }
 
 header > .showMenu {
@@ -152,22 +154,29 @@ h2 {
     font-weight: normal;
 }
 
-.nav_services > menu > a {
+.nav_services > menu {
+    padding: 0;
+}
+
+.nav_services > menu > li {
     width: 201px;
-    height: 200px;
     background-color: var(--white);
+    margin: 30px auto;
+}
+
+.nav_services > menu > li > a {
+    padding: 20px 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 30px auto;
-    padding: 20px 10px;
+    gap: 15px;
 }
 
-.nav_services > menu > a:nth-child(3) {
+.nav_services > menu > li > a:nth-child(3) {
     padding-top: 0;
 }
 
-.nav_services > menu > a > p {
+.nav_services > menu > li > a > p {
     margin: 0;
     color: var(--indigodye);
     font-size: var(--font14);
@@ -175,7 +184,7 @@ h2 {
     font-weight: bolder;
 }
 
-.nav_services > menu > a > img {
+.nav_services > menu > li > a > img {
     width: 100%;
     display: block;
     margin: 0;
@@ -284,11 +293,20 @@ footer > nav {
 
 footer > nav > menu {
     margin: 0;
+    padding: 0;
+}
+
+footer > nav > menu > li {
+    text-align: center;
+    margin: 10px 0;
 }
 
 footer > nav > menu > li > a {
     color: var(--white);
     font-size: var(--font20);
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }
 
 footer > nav > menu > .footer__nav--line {
@@ -322,8 +340,8 @@ footer > nav > menu > .footer__nav--line {
 }
 
 
-
 /*                           konfigurace                                 */
+
 
 .body__reversed {
     background-color: var(--white);
@@ -347,7 +365,7 @@ footer > nav > menu > .footer__nav--line {
 
 .body__reversed > main > h2 {
     color: var(--mainbackground);
-    margin: 10px 24px;
+    margin: 20px 24px;
 }
 
 main > .offers {
@@ -394,5 +412,141 @@ main > .offers > .offer > .offer__structure > div {
 }
 
 main > .offers > .offer > .offer__structure > div > p:nth-child(2){
+    text-align: right;
+}
+
+main > p {
+    color: var(--mainbackground);
+    margin-left: 24px;
+    margin-right: 24px;
+    text-align: center;
+}
+
+main > p > .texthightlight {
+    color: var(--red);
+    font-weight: bolder;
+}
+
+main > .OS {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding-bottom: 0;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main > .OS > .OS__example {
+    display: flex;
+    flex-direction: column;
+}
+
+main > .OS > .OS__example > img {
+    margin: 0 auto;
+}
+
+main > .OS > .OS__example > p {
+    text-align: center;
+    color: var(--richblack);
+    margin-bottom: 0;
+}
+
+
+/*                                Náhradní díly                                */
+
+
+main > .dily__skupina {
+    background-color: var(--mainbackground);
+    padding-top: 0;
+}
+
+main > .dily__skupina > .dily__skupina--grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+
+main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item {
+    background-color: var(--white);
+    height: min-content;
+}
+
+main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 245px;
+}
+
+main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
+    background-image: url(/Images/Náhradní_díly/Proc-1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 15px;
+    height: 150px;
+}
+
+main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item:nth-child(2) > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
+    background-image: url(/Images/Náhradní_díly/Proc-2.png);
+}
+
+main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item:nth-child(3) > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
+    background-image: url(/Images/Náhradní_díly/Proc-3.png);
+}
+
+main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item:nth-child(4) > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
+    background-image: url(/Images/Náhradní_díly/Proc-4.png);
+}
+
+main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item:nth-child(5) > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
+    background-image: url(/Images/Náhradní_díly/Proc-5.png);
+}
+
+main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item:nth-child(6) > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
+    background-image: url(/Images/Náhradní_díly/Proc-6.png);
+}
+
+main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item:nth-child(7) > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
+    background-image: url(/Images/Náhradní_díly/Proc-7.png);
+}
+
+main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .showMenu {
+    display: block !important;
+}
+
+main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .dily__skupina--grid--item--název {
+    text-align: center;
+    font-size: var(--font14);
+    font-weight: bold;
+    color: var(--richblack);
+    margin: 10px;
+    margin-top: 0;
+}
+
+main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .dily__skupina--grid--item--priceandarrow {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 10px 10px 10px;
+    color: var(--richblack);
+    font-size: var(--font16);
+    font-weight: bolder;
+}
+
+main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .dily__skupina--grid--item--priceandarrow > p {
+    margin: 0;
+}
+
+main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--description {
+    display: none;
+}
+
+main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--description > p {
+    margin: 8px;
+    color: var(--richblack);
+}
+
+main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--description > .vpravo {
     text-align: right;
 }
