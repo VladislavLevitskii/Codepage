@@ -674,3 +674,14 @@ main > iframe {
     margin: -10px 24px 20px 24px;
     width: -webkit-fill-available;
 }
+
+.button__kontakt1 {
+    margin: 30px auto 40px auto;
+    padding: 15px;
+    display: block;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: var(--font24);
+    text-align: center;
+    width: fit-content;
+}
