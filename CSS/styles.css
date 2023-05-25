@@ -422,7 +422,7 @@ main > p {
     text-align: center;
 }
 
-main > p > .texthightlight {
+.texthightlight {
     color: var(--red);
     font-weight: bolder;
 }
@@ -479,7 +479,7 @@ main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dil
 }
 
 main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
-    background-image: url(/Images/Náhradní_díly/Proc-1.png);
+    background-image: url(../Images/Náhradní_díly/Proc-1.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -488,27 +488,39 @@ main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dil
 }
 
 main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item:nth-child(2) > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
-    background-image: url(/Images/Náhradní_díly/Proc-2.png);
+    background-image: url(../Images/Náhradní_díly/Proc-2.png);
 }
 
 main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item:nth-child(3) > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
-    background-image: url(/Images/Náhradní_díly/Proc-3.png);
+    background-image: url(../Images/Náhradní_díly/Proc-3.png);
 }
 
 main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item:nth-child(4) > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
-    background-image: url(/Images/Náhradní_díly/Proc-4.png);
+    background-image: url(../Images/Náhradní_díly/Proc-4.png);
 }
 
 main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item:nth-child(5) > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
-    background-image: url(/Images/Náhradní_díly/Proc-5.png);
+    background-image: url(../Images/Náhradní_díly/Proc-5.png);
 }
 
 main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item:nth-child(6) > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
-    background-image: url(/Images/Náhradní_díly/Proc-6.png);
+    background-image: url(../Images/Náhradní_díly/Proc-6.png);
 }
 
 main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item:nth-child(7) > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
-    background-image: url(/Images/Náhradní_díly/Proc-7.png);
+    background-image: url(../Images/Náhradní_díly/Proc-7.png);
+}
+
+main > .dily__skupina:nth-child(3) > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
+    background-image: url(../Images/Náhradní_díly/Chladič.png);
+}
+
+main > .dily__skupina:nth-child(4) > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
+    background-image: url(../Images/Náhradní_díly/Základní_deska.png);
+}
+
+main > .dily__skupina:nth-child(5) > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
+    background-image: url(../Images/Náhradní_díly/RAM.png);
 }
 
 main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .showMenu {
@@ -545,8 +557,120 @@ main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dil
 main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--description > p {
     margin: 8px;
     color: var(--richblack);
+    font-size: var(--font14);
 }
 
 main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--description > .vpravo {
     text-align: right;
+}
+
+
+
+/*                        Kontakt                     */
+
+
+.body__reversed > main > h3 {
+    color: var(--mainbackground);
+    margin: 20px 24px;
+    text-align: center;
+    font-weight: normal;
+    font-size: var(--font16);
+}
+
+main > .grid__kontakt {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 0 24px 30px 24px;
+    align-items: center;
+}
+
+main > .grid__kontakt > .grid__kontakt--item {
+    background-color: var(--mainbackground);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+}
+
+main > .grid__kontakt > .grid__kontakt--item > p {
+    font-size: var(--font16);
+    color: var(--white);
+    text-align: center;
+    margin: 5px;
+}
+
+main > .grid__kontakt > .grid__kontakt--item > .grid__kontakt--item--img {
+    height: 100px;
+    width: 100px;
+    background-image: url(../Images/Icons/Instagram-Negative.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 10px;
+}
+
+main > .grid__kontakt > .grid__kontakt--item:nth-child(2) > .grid__kontakt--item--img {
+    background-image: url(../Images/Icons/Phone_white.svg);
+}
+
+main > .grid__kontakt > .grid__kontakt--item:nth-child(3) > .grid__kontakt--item--img {
+    background-image: url(../Images/Icons/Message__kontakt.svg);
+}
+
+main > .grid__kontakt > .grid__kontakt--item:nth-child(4) > .grid__kontakt--item--img {
+    background-image: url(../Images/Icons/Telegram__white.svg);
+}
+
+main > .blacktext {
+    color: var(--richblack) !important;
+    font-size: var(--font14);
+}
+
+main > .blacktext__big {
+    font-size: var(--font16) !important;
+}
+
+main > .sendmessage {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(120px, 300px));
+    grid-gap: 30px;
+    margin: 0 24px;
+    width: fit-content;
+}
+
+main > .sendmessage p {
+    text-align: center;
+}
+
+main > .sendmessage textarea {
+    height: 27px;
+    border: 2px solid var(--richblack);
+    display: flex;
+    justify-content: center;
+    width: -webkit-fill-available;
+}
+
+main > .sendmessage .sendmessage__rectangle > p {
+    color: var(--hoverwhite);
+    margin: 0;
+    font-size: var(--font16);
+    height: min-content;
+    align-self: center;
+}
+
+main > .sendmessage > .sendmessage__email {
+    grid-column: span 2;
+}
+
+main > .sendmessage > .sendmessage__email > textarea {
+    height: 200px;
+    width: -webkit-fill-available;
+}
+
+main > iframe {
+    margin: -10px 24px 20px 24px;
+    width: -webkit-fill-available;
 }
