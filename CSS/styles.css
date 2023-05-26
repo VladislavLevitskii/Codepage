@@ -169,7 +169,9 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
     gap: 15px;
+    box-sizing: border-box;
 }
 
 .nav_services > menu > li > a:nth-child(3) {
@@ -185,9 +187,9 @@ h2 {
 }
 
 .nav_services > menu > li > a > img {
-    width: 100%;
+    width: 80%;
     display: block;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
 
@@ -195,6 +197,10 @@ article {
     background-color: var(--white);
     color: var(--mainbackground);
     padding: 15px 24px;
+}
+
+.forlaprotandmore {
+    margin: 0 24px;
 }
 
 article > h3 {
@@ -206,7 +212,15 @@ article > ul {
     padding: 0;
 }
 
-article > ul > li {
+.article__grid__tabletandmore > ul:nth-child(4) {
+    display: none;
+}
+
+.article__grid__tabletandmore > h3:nth-child(3) {
+    display: none;
+}
+
+.article__grid__tabletandmore > ul > li {
     padding: 5px 0;
     font-size: var(--font16);
 }
@@ -297,7 +311,6 @@ footer > nav > menu {
 }
 
 footer > nav > menu > li {
-    text-align: center;
     margin: 10px 0;
 }
 
@@ -313,7 +326,11 @@ footer > nav > menu > .footer__nav--line {
     height: 15px;
 }
 
-@media screen and (min-width: 420px) {
+.swiper-slide {
+    height: auto !important;
+}
+
+@media screen and (min-width: 425px) {
     nav:nth-child(1) > menu {
         display: flex;
         margin: 0 24px;
@@ -325,7 +342,109 @@ footer > nav > menu > .footer__nav--line {
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 768px) {
+    body > main > h1 {
+        margin: 20px 97px;
+        text-align: left;
+    }
+
+    header > .nav__hamburger {
+        right: 97px;
+    }
+
+    body > main > .article__grid__tabletandmore {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 0;
+        column-gap: 30px;
+        padding: 15px 97px;
+    }
+
+    body > main > article > ul:nth-child(2) {
+        grid-column-start: 1;
+    }
+
+    .article__grid__tabletandmore > ul:nth-child(4) {
+        display: block;
+    }
+    
+    .article__grid__tabletandmore > h3:nth-child(3) {
+        display: block;
+    }
+
+    body > main > article > h3 {
+        grid-row-start: 1;
+    }
+
+    .article__zapory {
+        display: none;
+    }
+
+    .article__vyuziti > h3 {
+        margin: 50px 0;
+    }
+
+    .button__kontakt {
+        margin: 50px auto;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 97px 50px 97px;
+        gap: 30px;
+    }
+
+    footer > img {
+        margin: 0 auto;
+        width: 300px;
+    }
+
+    footer > nav {
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+    }
+
+    footer > nav > menu > .footer__nav--line {
+        display: none;
+    }
+
+    .nav_services > menu > li {
+        margin: 0;
+        width: -webkit-fill-available;
+    }
+
+    footer > nav > menu > li > a{
+        justify-content: start;
+    }
+
+    main > .forlaprotandmore > h2 {
+        text-align: left;
+        padding: 16px 97px;
+    }
+
+    .nav_services {
+        padding: 40px 97px;
+    }
+
+    .nav_services > menu {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin: 0;
+    }
+
+    body > nav > menu {
+        margin: 0 97px !important;
+    }
+
+    header {
+        margin: 15px 97px; 
+    }
+}
+
+@media screen and (min-width: 1024px) {
     .article__vyuziti--grid {
         grid-template-columns: repeat(4, 1fr);
         max-width: fit-content;
@@ -333,11 +452,32 @@ footer > nav > menu > .footer__nav--line {
     .article__vyuziti--grid > div {
         padding: 30px 50px 0 50px;
     }
-
+    
     .article__vyuziti--grid > div > img {
         width: 100%;
     }
+
+    .forlaprotandmore {
+        background-color: var(--white);
+    }
+
+    main > .forlaprotandmore > h2 {
+        color: var(--mainbackground);
+    }
+
+    .article__grid__tabletandmore {
+        background-color: var(--mainbackground);
+    }
+
+    .article__grid__tabletandmore > h3 {
+        color: var(--white);
+    }
+
+    .article__grid__tabletandmore > ul {
+        color: var(--white);
+    }
 }
+
 
 
 /*                           konfigurace                                 */

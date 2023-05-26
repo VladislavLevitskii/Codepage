@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <title>Codepage</title>
 </head>
 <body>
@@ -39,15 +40,17 @@
     </header>
     <main>
         <h1>Sestava PC konfigurace, oprava počítačů, SW řešení, náhradní díly </h1>
-        <h2>Služby</h2>
-        <nav class="nav_services">
-            <menu>
-                <li><a href="kontakt.html"><img src="./Images/Images__cut/NB1__cut--smaller.png" alt="Notebook"><p>Oprava počítačů</p></a></li>
-                <li><a href="konfigurace.html"><img src="./Images/Images__cut/PC__full.png" alt="PC"><p>Konfigurace PC sestav</p></a></li>
-                <li><a href="náhradnídíly.html"><img src="./Images/Images__cut/Díly.png" alt="Současti"><p>Náhradní díly</p></a></li>
-            </menu>
+        <div class="forlaprotandmore">
+            <h2>Služby</h2>
+            <nav class="nav_services swiper">
+                <menu class="swiper-wrapper">
+                    <li class="swiper-slide"><a href="kontakt.html"><img src="./Images/Images__cut/NB1__cut--smaller.png" alt="Notebook"><p>Oprava počítačů</p></a></li>
+                    <li class="swiper-slide"><a href="konfigurace.html"><img src="./Images/Images__cut/PC__full.png" alt="PC"><p>Konfigurace PC sestav</p></a></li>
+                    <li class="swiper-slide"><a href="náhradnídíly.html"><img src="./Images/Images__cut/Díly.png" alt="Současti"><p>Náhradní díly</p></a></li>
+                </menu>
         </nav>
-        <article>
+        </div>
+        <article class="article__grid__tabletandmore">
             <h3>Klady obnovených PC:</h3>
             <ul>
                 <li>- Velmi nízká cena</li>
@@ -57,6 +60,10 @@
                 <li>- Vyčištěný a přepastovaný (oproti bazarovým PC)</li>
                 <li>- Předinstalované základní programy, stačí zapojit a používat</li>
                 <li>- Dostatečný výkon dle Vašich požadavků</li>
+            </ul>
+            <h3>Zápory obnovených PC:</h3>
+            <ul>
+                <li>- Možné škrábance, malé kosmetické vady</li>
             </ul>
         </article>
         <article class="article__zapory">
@@ -85,6 +92,8 @@
                 <li><a href="náhradnídíly.html">Náhradní díly</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
                 <li class="footer__nav--line"></li>
+            </menu>
+            <menu>
                 <li><a href="tel:420722134560"><img src="./Images/Icons/Phone_white.svg" alt="Phone">+420 722 134 560</a></li>
                 <li><a href="mailto:info@codepage.cz"><img src="./Images/Icons/Message_white.svg" alt="Dopis">info@codepage.cz</a></li>
                 <li><a href="#"><img src="./Images/Icons/Facebook-Negative.svg" alt="Logo__facebook">Facebook</a></li>
@@ -93,5 +102,12 @@
         </nav>
     </footer>
     <script src="./JavaScript/hamburger.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        new Swiper(".swiper", {
+            loop: true,
+            spaceBetween: 30,
+        })
+    </script>
 </body>
 </html>
