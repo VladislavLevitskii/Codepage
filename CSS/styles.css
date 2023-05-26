@@ -187,10 +187,12 @@ h2 {
 }
 
 .nav_services > menu > li > a > img {
-    width: 80%;
+    height: 250px;
+    width: auto;
     display: block;
     margin: 0 auto;
     padding: 0;
+    flex-shrink: 1;
 }
 
 article {
@@ -201,6 +203,12 @@ article {
 
 .forlaprotandmore {
     margin: 0 24px;
+}
+
+.forlaprotandmore > h2 {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: -15px;
 }
 
 article > h3 {
@@ -326,8 +334,18 @@ footer > nav > menu > .footer__nav--line {
     height: 15px;
 }
 
-.swiper-slide {
-    height: auto !important;
+.swiper-pagination-bullets {
+    --swiper-pagination-bullet-size: 12px;
+    --swiper-pagination-color: var(--white);
+    --swiper-pagination-bottom: 15px;
+}
+
+.swiper-button-next {
+    --swiper-navigation-color: var(--mainbackground);
+}
+
+.swiper-button-prev {
+    --swiper-navigation-color: var(--mainbackground);
 }
 
 @media screen and (min-width: 425px) {
@@ -424,23 +442,26 @@ footer > nav > menu > .footer__nav--line {
         padding: 16px 97px;
     }
 
-    .nav_services {
-        padding: 40px 97px;
+    .swiper {
+        max-width: 830px;
+        margin: 15px 97px !important;
+        padding-bottom: 20px !important;
     }
 
-    .nav_services > menu {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
+    .forlaprotandmore {
         margin: 0;
-    }
-
-    body > nav > menu {
-        margin: 0 97px !important;
     }
 
     header {
         margin: 15px 97px; 
+    }
+
+    .swiper-pagination-bullets {
+        --swiper-pagination-bottom: 5px;
+    }
+
+    nav:nth-child(1) > menu {
+        margin: 0 97px;
     }
 }
 
@@ -475,6 +496,50 @@ footer > nav > menu > .footer__nav--line {
 
     .article__grid__tabletandmore > ul {
         color: var(--white);
+    }
+
+    .swiper-pagination-bullets {
+        --swiper-pagination-bottom: 10px;
+    }
+
+    .swiper-pagination-bullets {
+        --swiper-pagination-color: var(--mainbackground);
+    }
+
+    .article__grid__tabletandmore > ul > li {
+        font-size: var(--font20);
+    }
+
+    article > h3 {
+        font-size: var(--font24);
+    }
+
+    h1 {
+        font-size: var(--font32);
+    }
+
+    .swiper {
+        margin: 15px auto !important;
+    }
+
+    nav:nth-child(1) > menu {
+        margin: 0 175px;
+    }
+
+    header {
+        margin: 20px 175px;
+    }
+
+    body > main > h1 {
+        margin: 20px 175px;
+    }
+
+    main > .forlaprotandmore > h2 {
+        padding: 20px 175px;
+    }
+
+    body > main > .article__grid__tabletandmore {
+        padding: 20px 175px;
     }
 }
 

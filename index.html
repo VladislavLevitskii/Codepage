@@ -44,11 +44,14 @@
             <h2>Služby</h2>
             <nav class="nav_services swiper">
                 <menu class="swiper-wrapper">
-                    <li class="swiper-slide"><a href="kontakt.html"><img src="./Images/Images__cut/NB1__cut--smaller.png" alt="Notebook"><p>Oprava počítačů</p></a></li>
+                    <li class="swiper-slide"><a href="kontakt.html"><img src="./Images/Images__cut/NB1__cut.png" alt="Notebook"><p>Oprava počítačů</p></a></li>
                     <li class="swiper-slide"><a href="konfigurace.html"><img src="./Images/Images__cut/PC__full.png" alt="PC"><p>Konfigurace PC sestav</p></a></li>
                     <li class="swiper-slide"><a href="náhradnídíly.html"><img src="./Images/Images__cut/Díly.png" alt="Současti"><p>Náhradní díly</p></a></li>
                 </menu>
-        </nav>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </nav>
         </div>
         <article class="article__grid__tabletandmore">
             <h3>Klady obnovených PC:</h3>
@@ -105,8 +108,29 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
         new Swiper(".swiper", {
+
             loop: true,
+
             spaceBetween: 30,
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            pagination: {
+              el: '.swiper-pagination',
+              type: 'bullets',
+              clickable: true,
+            },
+        
+            autoplay: {
+              delay: 3500,
+            },
+
+            speed: 800,
+
+            effect: "coverflow",
         })
     </script>
 </body>
