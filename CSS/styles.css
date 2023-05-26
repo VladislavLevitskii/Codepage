@@ -187,8 +187,7 @@ h2 {
 }
 
 .nav_services > menu > li > a > img {
-    height: 250px;
-    width: auto;
+    height: 200px;
     display: block;
     margin: 0 auto;
     padding: 0;
@@ -348,6 +347,10 @@ footer > nav > menu > .footer__nav--line {
     --swiper-navigation-color: var(--mainbackground);
 }
 
+.nav__header--1024andmore {
+    display: none;
+}
+
 @media screen and (min-width: 425px) {
     nav:nth-child(1) > menu {
         display: flex;
@@ -392,6 +395,7 @@ footer > nav > menu > .footer__nav--line {
 
     body > main > article > h3 {
         grid-row-start: 1;
+        text-align: left;
     }
 
     .article__zapory {
@@ -407,8 +411,8 @@ footer > nav > menu > .footer__nav--line {
     }
 
     footer {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         padding: 30px 97px 50px 97px;
         gap: 30px;
     }
@@ -416,12 +420,17 @@ footer > nav > menu > .footer__nav--line {
     footer > img {
         margin: 0 auto;
         width: 300px;
+        grid-column: span 2;
     }
 
     footer > nav {
         display: flex;
         gap: 30px;
-        justify-content: space-between;
+        justify-content: flex-start;
+    }
+
+    footer > nav:nth-child(2) {
+        justify-content: flex-end;
     }
 
     footer > nav > menu > .footer__nav--line {
@@ -462,6 +471,10 @@ footer > nav > menu > .footer__nav--line {
 
     nav:nth-child(1) > menu {
         margin: 0 97px;
+    }
+
+    .nav_services > menu > li > a > img {
+        height: 250px;
     }
 }
 
@@ -541,9 +554,90 @@ footer > nav > menu > .footer__nav--line {
     body > main > .article__grid__tabletandmore {
         padding: 20px 175px;
     }
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+    }
+
+    footer > img {
+        grid-column: span 1;
+    }
+
+
+    footer > nav {
+        justify-content: center !important;
+    }
+
 }
 
+@media screen and (min-width: 1100px) {
+    .hamburgermenu {
+        display: none !important;
+    }
 
+    .nav__header--1024andmore {
+        display: block;
+    }
+
+    .nav__header--1024andmore > menu {
+        display: flex;
+        padding: 0;
+        gap: 20px;
+    }
+
+    .nav__header--1024andmore > menu > .verticalline__header {
+        width: 2px;
+        background-color: var(--richblack);
+    }
+
+    .nav__header--1024andmore > menu > li {
+        position: relative;
+    }
+
+    .nav__header--1024andmore > menu > li > .li__underline {
+        width: 100%;
+        height: 4px;
+        position: absolute;
+        background-color: var(--richblack);
+        transform: translateY(10px);
+        opacity: 0;
+        transition: .2s;
+    }
+
+    .nav__header--1024andmore > menu > li > .li__upperline {
+        width: 100%;
+        height: 4px;
+        position: absolute;
+        background-color: var(--richblack);
+        transform: translateY(-10px);
+        opacity: 0;
+        transition: .2s;
+    }
+
+    .nav__header--1024andmore > menu > li > a {
+        display: block;
+        padding: 10px 15px;
+        color: var(--white);
+        font-size: var(--font20);
+    }
+
+    .nav__header--1024andmore > menu > .li__kontakt > a {
+        background-color: var(--red);
+    }
+
+    .nav__header--1024andmore > menu > li:hover > .li__underline {
+        transform: translateY(0px);
+        opacity: 100;
+    }
+
+    .nav__header--1024andmore > menu > li:hover > .li__upperline {
+        opacity: 100;
+        transform: translateY(-100%);
+    }
+
+}
 
 /*                           konfigurace                                 */
 
