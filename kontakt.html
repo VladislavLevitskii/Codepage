@@ -44,10 +44,15 @@
                 <li><a href="kontakt.html">Kontakt</a></li>
             </menu>
         </nav>
+        <nav class="">
+            <menu>
+
+            </menu>
+        </nav>
     </header>
     <main>
         <h1>Kontakt</h1>
-        <h2>Adam Šourek</h2>
+        <h2 class="name__kontakt">Adam Šourek</h2>
         <h3>Kontaktovat pomocí:</h3>
         <div class="grid__kontakt">
             <a href="#" class="grid__kontakt--item">
@@ -75,22 +80,25 @@
         <p class="blacktext">Pište SMS, e-maily, na hovory odpovídám, ale často nemám čas</p>
         <h3 class="blacktext blacktext__big">Pouze <span class="texthightlight">osobní předání</span> v <span class="texthightlight">Libereckém kraji</span></h3>
         <h3 class="blacktext blacktext__big">Pošlete mně žádost a já Vám co nejdříve odpovím !</h3>
-        <form class="sendmessage">
-            <div class="sendmessage__name">
-                <p>Jméno</p>
-                <textarea placeholder="Jan Jech"></textarea>
-            </div>
-            <div class="sendmessage__name">
-                <p>Email</p>
-                <textarea placeholder="example@gmail.com"></textarea>
-            </div>
-            <div class="sendmessage__email">
-                <p>Text zprávy</p>
-                <textarea placeholder="Mám zájem o sestavu typu Herní +"></textarea>
-            </div>
-        </form>
-        <a href="#" class="button__kontakt1">Odeslat</a>
-        <iframe style="border:none" src="https://en.frame.mapy.cz/s/cesalebava" width="500" height="333" frameborder="0"></iframe>
+        <div class="messageandmap__desktop">
+            <form class="sendmessage">
+                <div class="sendmessage__name">
+                    <p>Jméno</p>
+                    <textarea placeholder="Jan Jech"></textarea>
+                </div>
+                <div class="sendmessage__name">
+                    <p>Email</p>
+                    <textarea placeholder="example@gmail.com"></textarea>
+                </div>
+                <div class="sendmessage__email">
+                    <p>Text zprávy</p>
+                    <textarea placeholder="Mám zájem o sestavu typu Herní +"></textarea>
+                </div>
+            </form>
+            <a href="#" class="button__kontakt1">Odeslat</a>
+            <iframe style="border:none" src="https://en.frame.mapy.cz/s/cesalebava" width="500" height="333" frameborder="0"></iframe>
+        </div>
+        <a href="#" class="button__kontakt1 notvisibleformobile">Odeslat</a>
     </main>
     <footer>
         <img src="./Images/Icons/Logo_header--mobile--white.svg" alt="Logo">
