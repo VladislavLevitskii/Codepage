@@ -109,6 +109,7 @@ header > .nav__hamburger {
     background-color: var(--white);
     border: 1px solid var(--richblack);
     border-right: 0;
+    z-index: 999;
 }
 
 header > .nav__hamburger > menu {
@@ -963,12 +964,14 @@ main > .dily__skupina > .dily__skupina--grid {
 main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item {
     background-color: var(--white);
     height: min-content;
+    transition: .2s;
+    position: relative;
 }
 
 main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 245px;
 }
 
@@ -979,6 +982,18 @@ main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dil
     background-position: center;
     margin: 15px;
     height: 150px;
+}
+
+.dily__skupina--grid--item--priceandarrow--forlaptop {
+    display: none;
+}
+
+.photolightgallery {
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    top: 0;
+    opacity: 0;
 }
 
 main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item:nth-child(2) > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
@@ -1028,6 +1043,7 @@ main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dil
     color: var(--richblack);
     margin: 10px;
     margin-top: 0;
+    transition: .2s;
 }
 
 main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .dily__skupina--grid--item--priceandarrow {
@@ -1046,12 +1062,14 @@ main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dil
 
 main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--description {
     display: none;
+    padding: 5px 10px 15px 5px;
 }
 
 main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--description > p {
     margin: 8px;
     color: var(--richblack);
     font-size: var(--font14);
+    font-weight: 600;
 }
 
 main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--description > .vpravo {
@@ -1073,6 +1091,11 @@ main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dil
     main > .dily__skupina > .dily__skupina--grid {
         grid-template-columns: repeat(4, 1fr);
     }
+
+    .dily__skupina > h2 {
+        text-align: left;
+        margin: 40px 0
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -1083,18 +1106,111 @@ main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dil
     main > .dily__skupina > .dily__skupina--grid {
         grid-template-columns: repeat(5, 1fr);
     }
+
+    .arrow {
+        display: none;
+    }
+
+    main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item {
+        overflow: hidden;
+    }
+
+    main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .priceandarrow10 {
+        display: none;
+    }
+
+    main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .priceandarrow9 {
+        display: none;
+    }
+
+    main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .priceandarrow8 {
+        display: none;
+    }
+
+    main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .priceandarrow7 {
+        display: none;
+    }
+
+    main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .priceandarrow6 {
+        display: none;
+    }
+
+    main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .priceandarrow5 {
+        display: none;
+    }
+
+    main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .priceandarrow4 {
+        display: none;
+    }
+
+    main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .priceandarrow3 {
+        display: none;
+    }
+
+    main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .priceandarrow2 {
+        display: none;
+    }
+
+    main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .priceandarrow1 {
+        display: none;
+    }
+
+    main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item:hover > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
+        opacity: 15% !important;
+    }
+
+    main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item:hover {
+        transform: scaleX(1.5);
+        background-color: var(--indigodye);
+        z-index: 2;
+    }
+
+    main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item:hover > .dily__skupina--grid--item--header > .dily__skupina--grid--item--název {
+        transform: scaleX(calc(2/3));
+        color: var(--white);
+    }
+
+    main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--description {
+        display: grid;
+        position: absolute;
+        top: 25px;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0px;
+        row-gap: 5px;
+        z-index: -1;
+        width: 120%;
+    }
+
+    main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item:hover > .dily__skupina--grid--item--description {
+        column-gap: 15px;
+        transform: scaleX(calc(2/3)) translateX(-20px);
+    }
+
+    main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--description > p {
+        margin: 0;
+        color: var(--white);
+    }
+
 }
 
 @media screen and (min-width: 1400px) {
 
     main > .dily__skupina > .dily__skupina--grid {
         grid-template-columns: repeat(6, 1fr);
-        max-width: 1400px;
+        max-width: 1500px;
     }
 
-
+    main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item:hover > .dily__skupina--grid--item--description {
+        transform: scaleX(calc(2/3));
+        width: 100%;
+    }
 }
 
+@media screen and (min-width: 2000px) {
+    main > .dily__skupina > .dily__skupina--grid {
+        grid-template-columns: repeat(7, 1fr);
+    }
+}
 /*                        Kontakt                     */
 
 
