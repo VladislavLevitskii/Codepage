@@ -94,3 +94,99 @@ function toggleMenu6() {
 }
 
 clickable6.addEventListener("click", toggleMenu6);
+
+var elms1 = document.getElementsByClassName("firstline");
+var n = elms1.length;
+function changeColor1(color) {
+    for(var i = 0; i < n; i ++) {
+        elms1[i].style.backgroundColor = color;
+    }
+}
+for(var i = 0; i < n; i ++) {
+    elms1[i].onmouseover = function() {
+        changeColor1("rgba(255, 255, 255, 0.05)");
+    };
+    elms1[i].onmouseout = function() {
+        changeColor1("#0685AE");
+    };
+}
+
+var elms2 = document.getElementsByClassName("secondline");
+var z = elms2.length;
+function changeColor2(color) {
+    for(var a = 0; a < n; a ++) {
+        elms2[a].style.backgroundColor = color;
+    }
+}
+for(var a = 0; a < n; a ++) {
+    elms2[a].onmouseover = function() {
+        changeColor2("rgba(255, 255, 255, 0.05)");
+    };
+    elms2[a].onmouseout = function() {
+        changeColor2("#0685AE");
+    };
+}
+
+var elms3 = document.getElementsByClassName("thirdline");
+var y = elms3.length;
+function changeColor3(color) {
+    for(var b = 0; b < n; b ++) {
+        elms3[b].style.backgroundColor = color;
+    }
+}
+for(var b = 0; b < n; b ++) {
+    elms3[b].onmouseover = function() {
+        changeColor3("rgba(255, 255, 255, 0.05)");
+    };
+    elms3[b].onmouseout = function() {
+        changeColor3("#0685AE");
+    };
+}
+
+var elms4 = document.getElementsByClassName("forthline");
+var x = elms4.length;
+function changeColor4(color) {
+    for(var c = 0; c < n; c ++) {
+        elms4[c].style.backgroundColor = color;
+    }
+}
+for(var c = 0; c < n; c ++) {
+    elms4[c].onmouseover = function() {
+        changeColor4("rgba(255, 255, 255, 0.05)");
+    };
+    elms4[c].onmouseout = function() {
+        changeColor4("#0685AE");
+    };
+}
+
+var elms5 = document.getElementsByClassName("fifthline");
+var g = elms5.length;
+function changeColor5(color) {
+    for(var d = 0; d < n; d ++) {
+        elms5[d].style.backgroundColor = color;
+    }
+}
+for(var d = 0; d < n; d ++) {
+    elms5[d].onmouseover = function() {
+        changeColor5("rgba(255, 255, 255, 0.05)");
+    };
+    elms5[d].onmouseout = function() {
+        changeColor5("#0685AE");
+    };
+}
+
+var elms6 = document.getElementsByClassName("sixthline");
+var h = elms6.length;
+function changeColor6(color) {
+    for(var e = 0; e < n; e ++) {
+        elms6[e].style.backgroundColor = color;
+    }
+}
+for(var e = 0; e < n; e ++) {
+    elms6[e].onmouseover = function() {
+        changeColor6("rgba(255, 255, 255, 0.05)");
+    };
+    elms6[e].onmouseout = function() {
+        changeColor6("#0685AE");
+    };
+}
