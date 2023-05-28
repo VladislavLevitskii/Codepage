@@ -343,25 +343,29 @@ footer {
     padding: 20px 24px 40px 24px;
 }
 
-footer > img {
+.footer__maxwidth1200px {
+    max-width: 1400px;
+}
+
+.footer__maxwidth1200px > img {
     margin: 0 auto;
     display: block;
 }
 
-footer > nav {
+.footer__maxwidth1200px > nav {
     margin-top: 20px;
 }
 
-footer > nav > menu {
+.footer__maxwidth1200px > nav > menu {
     margin: 0;
     padding: 0;
 }
 
-footer > nav > menu > li {
+.footer__maxwidth1200px > nav > menu > li {
     margin: 10px 0;
 }
 
-footer > nav > menu > li > a {
+.footer__maxwidth1200px > nav > menu > li > a {
     color: var(--white);
     font-size: var(--font20);
     display: flex;
@@ -369,7 +373,7 @@ footer > nav > menu > li > a {
     justify-content: center;
 }
 
-footer > nav > menu > .footer__nav--line {
+.footer__maxwidth1200px > nav > menu > .footer__nav--line {
     height: 15px;
 }
 
@@ -451,29 +455,32 @@ footer > nav > menu > .footer__nav--line {
     }
 
     footer {
+        padding: 30px 97px 50px 97px;
+    }
+
+    .footer__maxwidth1200px {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        padding: 30px 97px 50px 97px;
         gap: 30px;
     }
 
-    footer > img {
+    .footer__maxwidth1200px > img {
         margin: 0 auto;
         width: 300px;
         grid-column: span 2;
     }
 
-    footer > nav {
+    .footer__maxwidth1200px > nav {
         display: flex;
         gap: 30px;
         justify-content: flex-start;
     }
 
-    footer > nav:nth-child(2) {
+    .footer__maxwidth1200px > nav:nth-child(2) {
         justify-content: flex-end;
     }
 
-    footer > nav > menu > .footer__nav--line {
+    .footer__maxwidth1200px > nav > menu > .footer__nav--line {
         display: none;
     }
 
@@ -482,7 +489,7 @@ footer > nav > menu > .footer__nav--line {
         width: -webkit-fill-available;
     }
 
-    footer > nav > menu > li > a{
+    .footer__maxwidth1200px > nav > menu > li > a{
         justify-content: start;
     }
 
@@ -585,10 +592,11 @@ footer > nav > menu > .footer__nav--line {
 
     header {
         margin: 20px 175px;
+        max-width: 1400px;
     }
 
     body > main > h1 {
-        margin: 20px 175px;
+        margin: 35px 175px;
     }
 
     main > .forlaprotandmore > h2 {
@@ -600,17 +608,21 @@ footer > nav > menu > .footer__nav--line {
     }
 
     footer {
+        padding: 30px 175px 50px 175px;
+    }
+
+    .footer__maxwidth1200px {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 50px;
     }
 
-    footer > img {
+    .footer__maxwidth1200px > img {
         grid-column: span 1;
     }
 
 
-    footer > nav {
+    .footer__maxwidth1200px > nav {
         justify-content: center !important;
     }
 
@@ -698,7 +710,71 @@ footer > nav > menu > .footer__nav--line {
 
 }
 
+
+@media screen and (min-width: 1750px) {
+    header {
+        margin: 20px auto;
+    }
+
+    h1 {
+        margin: 20px auto !important;
+        max-width: 1400px;
+    }
+
+    nav:nth-child(1) > menu {
+        margin: 0px auto;
+        max-width: 1400px;
+    }
+
+    main > .forlaprotandmore > h2 {
+        padding: 20px 0;
+        margin: 0 auto;
+        max-width: 1400px;
+    }
+
+    body > main > .article__grid__tabletandmore {
+        padding: 20px 0;
+        margin: 0 auto;
+        max-width: 1400px;
+    }
+
+    footer > .footer__maxwidth1200px {
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*                           konfigurace                                 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .body__reversed {
@@ -719,6 +795,10 @@ footer > nav > menu > .footer__nav--line {
 
 .body__reversed > main > h1 {
     color: var(--mainbackground);
+}
+
+.cesticka {
+    display: none;
 }
 
 .body__reversed > main > h2 {
@@ -790,8 +870,8 @@ main > .OS {
     grid-template-columns: 1fr 2fr 1fr;
     padding-bottom: 0;
     max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 24px;
+    margin-right: 24px;
 }
 
 main > .OS > .OS__example {
@@ -813,8 +893,12 @@ main > .OS > .OS__example > p {
     display: none;
 }
 
+.body__reversed > main > h2:nth-child(7) {
+    text-align: center;
+}
+
 @media screen and (min-width: 550px) {
-    .OS {
+    main > .OS {
         margin: 0 auto;
     }
 }
@@ -825,7 +909,7 @@ main > .OS > .OS__example > p {
     }
 
     main > p {
-        font-size: var(--font24);
+        font-size: var(--font20);
         margin: 24px 97px;
     }
 
@@ -846,7 +930,18 @@ main > .OS > .OS__example > p {
 @media screen and (min-width: 1024px) {
 
     .body__reversed > main > h2 {
-        margin: 20px 175px;
+        margin: 30px 175px;
+        font-size: var(--font24);
+    }
+
+    main > p:nth-child(9) {
+        margin-bottom: 0;
+        margin-top: 50px;
+    }
+
+    .body__reversed > main > h2:nth-child(7) {
+        margin: 50px auto;
+        width: fit-content;
     }
 
     .offers {
@@ -865,6 +960,47 @@ main > .OS > .OS__example > p {
     .paddingfortable {
         padding: 20px 175px;
         background-color: var(--mainbackground);
+    }
+
+    main > nav:nth-child(2) {
+        max-width: 1400px;
+        margin: 0 175px;
+    }
+
+    .cesticka {
+        display: flex;
+        padding: 0;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .cesticka__white > li {
+        color: var(--white) !important;
+    } 
+
+    .cesticka__white > li > a {
+        color: var(--white) !important;
+    } 
+
+    .cesticka__white > .cesticka__dot {
+        background-color: var(--white) !important;
+    }
+
+    .cesticka > li {
+        color: var(--richblack);
+        font-size: var(--font14);
+    }
+
+    .cesticka > .cesticka__dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 1000%;
+        background-color: var(--richblack);
+    }
+
+    .cesticka > li > a {
+        color: var(--richblack);
+        font-size: var(--font14);
     }
 
     .table__for1024 > div {
@@ -947,7 +1083,60 @@ main > .OS > .OS__example > p {
         font-weight: bolder;
     }
 }
+
+@media screen and (min-width: 1750px) {
+    .paddingfortable {
+        padding: 20px auto;
+    }
+
+    main > nav:nth-child(2) {
+        margin: 0 auto;
+    }
+
+    .table__for1024 {
+        margin: 0 auto;
+        max-width: 1400px;
+    }
+
+    .body__reversed > main > h2 {
+        margin: 30px auto;
+        max-width: 1400px;
+    }
+
+    .body__reversed > main > h2:nth-child(7) {
+        margin: 50px auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*                                Náhradní díly                                */
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 main > .dily__skupina {
@@ -964,7 +1153,7 @@ main > .dily__skupina > .dily__skupina--grid {
 main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item {
     background-color: var(--white);
     height: min-content;
-    transition: .2s;
+    transition: .1s;
     position: relative;
 }
 
@@ -1020,15 +1209,15 @@ main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item:nth-ch
     background-image: url(../Images/Náhradní_díly/Proc-7.png);
 }
 
-main > .dily__skupina:nth-child(3) > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
+main > .dily__skupina:nth-child(4) > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
     background-image: url(../Images/Náhradní_díly/Chladič.png);
 }
 
-main > .dily__skupina:nth-child(4) > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
+main > .dily__skupina:nth-child(5) > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
     background-image: url(../Images/Náhradní_díly/Základní_deska.png);
 }
 
-main > .dily__skupina:nth-child(5) > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
+main > .dily__skupina:nth-child(6) > .dily__skupina--grid > .dily__skupina--grid--item > .dily__skupina--grid--item--header > .dily__skupina--grid--item--header--img {
     background-image: url(../Images/Náhradní_díly/RAM.png);
 }
 
@@ -1103,8 +1292,8 @@ main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dil
         padding: 0 175px;
     }
 
-    main > .dily__skupina > .dily__skupina--grid {
-        grid-template-columns: repeat(5, 1fr);
+    main > .dily__skupina > h2 {
+        font-size: var(--font24);
     }
 
     .arrow {
@@ -1193,12 +1382,13 @@ main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dil
 
 }
 
-@media screen and (min-width: 1400px) {
-
+@media screen and (min-width: 1250px) {
     main > .dily__skupina > .dily__skupina--grid {
-        grid-template-columns: repeat(6, 1fr);
-        max-width: 1500px;
+        grid-template-columns: repeat(5, 1fr);
     }
+}
+
+@media screen and (min-width: 1400px) {
 
     main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item:hover > .dily__skupina--grid--item--description {
         transform: scaleX(calc(2/3));
@@ -1206,12 +1396,62 @@ main > .dily__skupina > .dily__skupina--grid > .dily__skupina--grid--item > .dil
     }
 }
 
-@media screen and (min-width: 2000px) {
-    main > .dily__skupina > .dily__skupina--grid {
-        grid-template-columns: repeat(7, 1fr);
+@media screen and (min-width: 1750px) {
+    main > .dily__skupina {
+        max-width: 1400px;
+        margin: 0 auto;
     }
 }
+
+@media screen and (min-width: 2000px) {
+    main > .dily__skupina > .dily__skupina--grid {
+    grid-template-columns: repeat(6, 1fr);
+    max-width: 1400px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*                        Kontakt                     */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .body__reversed > main > h3 {
@@ -1321,6 +1561,11 @@ main > .messageandmap__desktop > iframe {
     width: -webkit-fill-available;
 }
 
+.button__left--kontakt {
+    max-width: 1400px;
+}
+
+
 .button__kontakt1 {
     margin: 30px auto 40px auto;
     padding: 15px;
@@ -1366,14 +1611,20 @@ main > .messageandmap__desktop > iframe {
 @media screen and (min-width: 823px) {
     main > .messageandmap__desktop > .sendmessage {
         margin: 0 auto;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main > .grid__kontakt {
+        margin: 0 175px 30px 175px;
     }
 }
 
 @media screen and (min-width: 1111px) {
     main > .grid__kontakt {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        margin: 0 175px 30px 175px;
-        max-width: 1200px;
+        max-width: 1000px;
     }
 
     .body__reversed main > .name__kontakt {
@@ -1399,7 +1650,7 @@ main > .messageandmap__desktop > iframe {
         grid-template-columns: 1fr 1fr;
         gap: 20px;
         margin: 0 175px;
-        max-width: 1200px;
+        max-width: 1400px;
     }
 
     main > .messageandmap__desktop > iframe {
@@ -1412,12 +1663,26 @@ main > .messageandmap__desktop > iframe {
     }
 }
 
-@media screen and (min-width: 1550px) {
+@media screen and (min-width: 1350px) {
+    main > .grid__kontakt {
+        margin: 0 auto 30px auto;
+    }
+}
+
+@media screen and (min-width: 1750px) {
     main > .messageandmap__desktop {
         margin: 0 auto;
     }
 
     main > .grid__kontakt {
         margin: 0 auto 30px auto;
+    }
+
+    .button__left--kontakt {
+        margin: 0 auto;
+    }
+
+    .button__left--kontakt > .button__kontakt1 {
+        margin: 30px 0 40px 0;
     }
 }
