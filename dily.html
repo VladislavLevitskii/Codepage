@@ -6,20 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/normalize.css">
     <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet" href="./CSS/components.css">
     <link rel="icon" type="image/x-icon" href="./Images/Icons/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./lightGallery-master/dist/css/lightgallery-bundle.min.css">
     <title>Codepage | Náhradní díly</title>
 </head>
 <body>
-    <nav>
-        <menu>
-            <li><a href="tel:+420722134560"><img src="./Images/Icons/Phone_white.svg" alt="Phone">+420 722 134 560</a>
-            <li><a href="mailto:info@codepage.cz"><img src="./Images/Icons/Message_white.svg" alt="Phone">info@codepage.cz</a>
-        </menu>
-    </nav>
+    <ul>
+        <li><a href="tel:+420722134560"><img src="./Images/Icons/Phone_white.svg" alt="Phone">+420 722 134 560</a>
+        <li><a href="mailto:info@codepage.cz"><img src="./Images/Icons/Message_white.svg" alt="Phone">info@codepage.cz</a>
+    </ul>
     <div class="navlineheader"></div>
     <header>
         <div class="header__flex">
@@ -31,22 +29,24 @@
             </div>
             <nav class="nav__header--1024andmore">
                 <menu>
+                    <li><div class="li__upperline"></div><a href="index.html">Úvod</a><div class="li__underline"></div></li>
                     <li><div class="li__upperline"></div><a href="konfigurace.html">Konfigurace PC</a><div class="li__underline"></div></li>
-                    <li><div class="li__upperline"></div><a href="náhradnídíly.html">Náhradní díly</a><div class="li__underline"></div></li>
+                    <li><a href="dily.html">Náhradní díly</a><div class="li__underline li__underline--active"></div></li>
                     <li class="verticalline__header"></li>
-                    <li class="li__kontakt"><a href="kontakt.html" class="button__kontakt"><p>Kontakt</p> <div class="button__kontakt--bluerectangle"></div></a></li>
+                    <li class="li__kontakt"><a href="kontakt.html" class="button__kontakt"><span>Kontakt</span><div class="button__kontakt--bluerectangle"></div></a></li>
                 </menu>
             </nav>
         </div>
         <nav class="nav__hamburger">
             <menu>
+                <li><a href="index.html">Úvodní stránka</a></li>
                 <li><a href="konfigurace.html">Konfigurace PC sestav</a></li>
-                <li><a href="náhradnídíly.html">Náhradní díly</a></li>
+                <li><a href="dily.html">Náhradní díly</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
             </menu>
         </nav>
     </header>
-    <main id="lightgallery">
+    <main>
         <h1>Náhradní díly</h1>
         <nav>
             <menu class="cesticka cesticka__white">
@@ -58,20 +58,16 @@
         <article class="dily__skupina">
             <h2>Procesory</h2>
             <div class="dily__skupina--grid">
-                <div class="dily__skupina--grid--item item1">
+                <a href="./soucasti/soucast1.html" class="dily__skupina--grid--item" id="1">
                     <div class="dily__skupina--grid--item--header">
                         <div class="dily__skupina--grid--item--header--img"></div>
-                        <img src="./Images/Náhradní_díly/Proc1__big.png" alt="Procesor první" class="photolightgallery anchor">
                         <p class="dily__skupina--grid--item--název">Intel Core 2 Duo E6600</p>
                         <div class="dily__skupina--grid--item--priceandarrow priceandarrow1">
                             <p>50 Kč</p>
-                            <img src="./Images/Icons/More__black.svg" alt="Arrow" class="arrow arrow1">
-                        </div>
-                        <div class="dily__skupina--grid--item--priceandarrow--forlaptop">
-                            <p>100 Kč</p>
+                            <img src="./Images/Icons/More__black.svg" alt="Arrow" class="arrow">
                         </div>
                     </div>
-                    <div class="dily__skupina--grid--item--description description1">
+                    <div class="dily__skupina--grid--item--description">
                         <p>Lithography</p>
                         <p class="vpravo">65 nm</p>
                         <p>Počet jader</p>
@@ -89,21 +85,17 @@
                         <p>Socket</p>
                         <p class="vpravo">775</p>
                     </div>
-                </div>
-                <div class="dily__skupina--grid--item item2">
+                </a>
+                <a href="./soucasti/soucast2.html" class="dily__skupina--grid--item"  id="2">
                     <div class="dily__skupina--grid--item--header">
                         <div class="dily__skupina--grid--item--header--img"></div>
-                        <img src="./Images/Náhradní_díly/Proc2__big.png" alt="Procesor druhý" class="photolightgallery anchor">
                         <p class="dily__skupina--grid--item--název">Intel Core 2 Duo E4500</p>
                         <div class="dily__skupina--grid--item--priceandarrow priceandarrow2">
                             <p>50 Kč</p>
-                            <img src="./Images/Icons/More__black.svg" alt="Arrow" class="arrow arrow2">
-                        </div>
-                        <div class="dily__skupina--grid--item--priceandarrow--forlaptop">
-                            <p>100 Kč</p>
+                            <img src="./Images/Icons/More__black.svg" alt="Arrow" class="arrow">
                         </div>
                     </div>
-                    <div class="dily__skupina--grid--item--description description2">
+                    <div class="dily__skupina--grid--item--description">
                         <p>Lithography</p>
                         <p class="vpravo">65 nm</p>
                         <p>Počet jader</p>
@@ -121,21 +113,17 @@
                         <p>Socket</p>
                         <p class="vpravo">775</p>
                     </div>
-                </div>
-                <div class="dily__skupina--grid--item item3">
+                </a>
+                <a href="./soucasti/soucast3.html" class="dily__skupina--grid--item"  id="3">
                     <div class="dily__skupina--grid--item--header">
                         <div class="dily__skupina--grid--item--header--img"></div>
-                        <img src="./Images/Náhradní_díly/Proc3__big.png" alt="Procesor třetí" class="photolightgallery anchor">
                         <p class="dily__skupina--grid--item--název">Pentium Dual Core E2140</p>
                         <div class="dily__skupina--grid--item--priceandarrow priceandarrow3">
                             <p>40 Kč</p>
-                            <img src="./Images/Icons/More__black.svg" alt="Arrow" class="arrow arrow3">
-                        </div>
-                        <div class="dily__skupina--grid--item--priceandarrow--forlaptop">
-                            <p>100 Kč</p>
+                            <img src="./Images/Icons/More__black.svg" alt="Arrow" class="arrow">
                         </div>
                     </div>
-                    <div class="dily__skupina--grid--item--description description3">
+                    <div class="dily__skupina--grid--item--description">
                         <p>Lithography</p>
                         <p class="vpravo">65 nm</p>
                         <p>Počet jader</p>
@@ -153,21 +141,17 @@
                         <p>Socket</p>
                         <p class="vpravo">775</p>
                     </div>
-                </div>
-                <div class="dily__skupina--grid--item item4">
+                </a>
+                <a href="./soucasti/soucast4.html" class="dily__skupina--grid--item"  id="4">
                     <div class="dily__skupina--grid--item--header">
                         <div class="dily__skupina--grid--item--header--img"></div>
-                        <img src="./Images/Náhradní_díly/Proc4__big.png" alt="Procesor čtvrtý" class="photolightgallery anchor">
                         <p class="dily__skupina--grid--item--název">Intel Celeron G440</p>
                         <div class="dily__skupina--grid--item--priceandarrow priceandarrow4">
                             <p>200 Kč</p>
-                            <img src="./Images/Icons/More__black.svg" alt="Arrow" class="arrow arrow4">
-                        </div>
-                        <div class="dily__skupina--grid--item--priceandarrow--forlaptop">
-                            <p>100 Kč</p>
+                            <img src="./Images/Icons/More__black.svg" alt="Arrow" class="arrow">
                         </div>
                     </div>
-                    <div class="dily__skupina--grid--item--description description4">
+                    <div class="dily__skupina--grid--item--description">
                         <p>Lithography</p>
                         <p class="vpravo">32 nm</p>
                         <p>Počet jader</p>
@@ -185,21 +169,17 @@
                         <p>Socket</p>
                         <p class="vpravo">1155</p>
                     </div>
-                </div>
-                <div class="dily__skupina--grid--item item5">
+                </a>
+                <a href="./soucasti/soucast5.html" class="dily__skupina--grid--item"  id="5">
                     <div class="dily__skupina--grid--item--header">
                         <div class="dily__skupina--grid--item--header--img"></div>
-                        <img src="./Images/Náhradní_díly/Proc5__big.png" alt="Procesor pátý" class="photolightgallery anchor">
                         <p class="dily__skupina--grid--item--název">Intel Celeron 420</p>
                         <div class="dily__skupina--grid--item--priceandarrow priceandarrow5">
                             <p>30 Kč</p>
-                            <img src="./Images/Icons/More__black.svg" alt="Arrow" class="arrow arrow5">
-                        </div>
-                        <div class="dily__skupina--grid--item--priceandarrow--forlaptop">
-                            <p>100 Kč</p>
+                            <img src="./Images/Icons/More__black.svg" alt="Arrow" class="arrow">
                         </div>
                     </div>
-                    <div class="dily__skupina--grid--item--description description5">
+                    <div class="dily__skupina--grid--item--description">
                         <p>Lithography</p>
                         <p class="vpravo">65 nm</p>
                         <p>Počet jader</p>
@@ -217,21 +197,17 @@
                         <p>Socket</p>
                         <p class="vpravo">775</p>
                     </div>
-                </div>
-                <div class="dily__skupina--grid--item item6">
+                </a>
+                <a href="./soucasti/soucast6.html" class="dily__skupina--grid--item"  id="6">
                     <div class="dily__skupina--grid--item--header">
                         <div class="dily__skupina--grid--item--header--img"></div>
-                        <img src="./Images/Náhradní_díly/Proc6__big.png" alt="Procesor šestý" class="photolightgallery anchor">
                         <p class="dily__skupina--grid--item--název">Intel Core i5 4340M</p>
                         <div class="dily__skupina--grid--item--priceandarrow priceandarrow6">
                             <p>1000 Kč</p>
-                            <img src="./Images/Icons/More__black.svg" alt="Arrow" class="arrow arrow6">
-                        </div>
-                        <div class="dily__skupina--grid--item--priceandarrow--forlaptop">
-                            <p>100 Kč</p>
+                            <img src="./Images/Icons/More__black.svg" alt="Arrow" class="arrow">
                         </div>
                     </div>
-                    <div class="dily__skupina--grid--item--description description6">
+                    <div class="dily__skupina--grid--item--description">
                         <p>Lithography</p>
                         <p class="vpravo">22 nm</p>
                         <p>Počet jader</p>
@@ -249,21 +225,17 @@
                         <p>Socket</p>
                         <p class="vpravo">G3</p>
                     </div>
-                </div>
-                <div class="dily__skupina--grid--item item7">
+                </a>
+                <a href="./soucasti/soucast7.html" class="dily__skupina--grid--item"  id="7">
                     <div class="dily__skupina--grid--item--header">
                         <div class="dily__skupina--grid--item--header--img"></div>
-                        <img src="./Images/Náhradní_díly/Proc7__big.png" alt="Procesor sedmý" class="photolightgallery anchor">
                         <p class="dily__skupina--grid--item--název">Pentium G630</p>
                         <div class="dily__skupina--grid--item--priceandarrow priceandarrow7">
                             <p>300 Kč</p>
-                            <img src="./Images/Icons/More__black.svg" alt="Arrow" class="arrow arrow7">
-                        </div>
-                        <div class="dily__skupina--grid--item--priceandarrow--forlaptop">
-                            <p>100 Kč</p>
+                            <img src="./Images/Icons/More__black.svg" alt="Arrow" class="arrow">
                         </div>
                     </div>
-                    <div class="dily__skupina--grid--item--description description7">
+                    <div class="dily__skupina--grid--item--description">
                         <p>Lithography</p>
                         <p class="vpravo">32 nm</p>
                         <p>Počet jader</p>
@@ -281,51 +253,43 @@
                         <p>Socket</p>
                         <p class="vpravo">G3</p>
                     </div>
-                </div>
+                </a>
             </div>
         </article>
         <article class="dily__skupina">
             <h2>Chladiče</h2>
             <div class="dily__skupina--grid">
-                <div class="dily__skupina--grid--item item8">
+                <a href="./soucasti/soucast8.html" class="dily__skupina--grid--item"  id="8">
                     <div class="dily__skupina--grid--item--header">
                         <div class="dily__skupina--grid--item--header--img"></div>
-                        <img src="./Images/Náhradní_díly/Chladič__big.png" alt="Chladič" class="photolightgallery anchor">
                         <p class="dily__skupina--grid--item--název">Chladič Asus</p>
                         <div class="dily__skupina--grid--item--priceandarrow priceandarrow8">
                             <p>50 Kč</p>
-                            <img src="./Images/Icons/More__black.svg" alt="Arrow" class="arrow arrow8">
-                        </div>
-                        <div class="dily__skupina--grid--item--priceandarrow--forlaptop">
-                            <p>100 Kč</p>
+                            <img src="./Images/Icons/More__black.svg" alt="Arrow" class="arrow">
                         </div>
                     </div>
-                    <div class="dily__skupina--grid--item--description description8">
+                    <div class="dily__skupina--grid--item--description">
                         <p>Firma</p>
                         <p class="vpravo">Asus</p>
                         <p>Socket</p>
                         <p class="vpravo">775</p>
                     </div>
-                </div>
+                </a>
             </div>
         </article>
         <article class="dily__skupina">
             <h2>Základní desky</h2>
             <div class="dily__skupina--grid">
-                <div class="dily__skupina--grid--item item9">
+                <a href="./soucasti/soucast9.html" class="dily__skupina--grid--item"  id="9">
                     <div class="dily__skupina--grid--item--header">
                         <div class="dily__skupina--grid--item--header--img"></div>
-                        <img src="./Images/Náhradní_díly/Základní_deska__big.png" alt="Základní deska" class="photolightgallery anchor">
                         <p class="dily__skupina--grid--item--název">MSI 945GCM5 V2</p>
                         <div class="dily__skupina--grid--item--priceandarrow priceandarrow9">
                             <p>250 Kč</p>
-                            <img src="./Images/Icons/More__black.svg" alt="Arrow" class="arrow arrow9">
-                        </div>
-                        <div class="dily__skupina--grid--item--priceandarrow--forlaptop">
-                            <p>100 Kč</p>
+                            <img src="./Images/Icons/More__black.svg" alt="Arrow" class="arrow">
                         </div>
                     </div>
-                    <div class="dily__skupina--grid--item--description description9">
+                    <div class="dily__skupina--grid--item--description">
                         <p>Socket</p>
                         <p class="vpravo">775</p>
                         <p>Paměť</p>
@@ -339,33 +303,29 @@
                         <p>Form-factor</p>
                         <p class="vpravo">M-ATX</p>
                     </div>
-                </div>
+                </a>
             </div>
         </article>
         <article class="dily__skupina">
             <h2>RAM paměť</h2>
             <div class="dily__skupina--grid">
-                <div class="dily__skupina--grid--item item10">
+                <a href="./soucasti/soucast10.html" class="dily__skupina--grid--item"  id="10">
                     <div class="dily__skupina--grid--item--header">
                         <div class="dily__skupina--grid--item--header--img"></div>
-                        <img src="./Images/Náhradní_díly/RAM__big.png" alt="RAM" class="photolightgallery anchor">
                         <p class="dily__skupina--grid--item--název">DDR 2 512 MB</p>
                         <div class="dily__skupina--grid--item--priceandarrow priceandarrow10">
                             <p>100 Kč</p>
-                            <img src="./Images/Icons/More__black.svg" alt="Arrow" class="arrow arrow10">
-                        </div>
-                        <div class="dily__skupina--grid--item--priceandarrow--forlaptop">
-                            <p>100 Kč</p>
+                            <img src="./Images/Icons/More__black.svg" alt="Arrow" class="arrow">
                         </div>
                     </div>
-                    <div class="dily__skupina--grid--item--description description10">
+                    <div class="dily__skupina--grid--item--description">
                         <p>Frekvence</p>
                         <p class="vpravo">500 MHz</p>
                     </div>
-                </div>
+                </a>
             </div>
         </article>
-        <a href="kontakt.html" class="button__kontakt"><p>Kontaktovat v případě zájmu</p><div class="button__kontakt--bluerectangle"></div></a>
+        <a href="kontakt.html" class="button__kontakt"><span>Kontaktovat v případě zájmu</span><div class="button__kontakt--bluerectangle"></div></a>
     </main>
     <footer>
         <div class="footer__maxwidth1200px">
@@ -374,35 +334,18 @@
                 <menu>
                     <li><a href="#">Domovská stránka</a></li>
                     <li><a href="konfigurace.html">Konfigurace PC sestav</a></li>
-                    <li><a href="náhradnídíly.html">Náhradní díly</a></li>
+                    <li><a href="dily.html">Náhradní díly</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
-                    <li class="footer__nav--line"></li>
                 </menu>
             </nav>
-            <nav>
-                <menu>
-                    <li><a href="tel:420722134560"><img src="./Images/Icons/Phone_white.svg" alt="Phone">+420 722 134 560</a></li>
-                    <li><a href="mailto:info@codepage.cz"><img src="./Images/Icons/Message_white.svg" alt="Dopis">info@codepage.cz</a></li>
-                    <li><a href="#"><img src="./Images/Icons/Facebook-Negative.svg" alt="Logo__facebook">Facebook</a></li>
-                    <li><a href="#"><img src="./Images/Icons/Instagram-Negative.svg" alt="Logo__instagram">Instagram</a></li>
-                </menu>
-            </nav>
+            <ul>
+                <li><a href="tel:420722134560"><img src="./Images/Icons/Phone_white.svg" alt="Phone">+420 722 134 560</a></li>
+                <li><a href="mailto:info@codepage.cz"><img src="./Images/Icons/Message_white.svg" alt="Dopis">info@codepage.cz</a></li>
+                <li><a href="#"><img src="./Images/Icons/Facebook-Negative.svg" alt="Logo__facebook">Facebook</a></li>
+                <li><a href="#"><img src="./Images/Icons/Instagram-Negative.svg" alt="Logo__instagram">Instagram</a></li>
+            </ul>
         </div>
     </footer>
     <script src="./JavaScript/hamburger.js"></script>
-    <script src="./JavaScript/náhradnídíly.js"></script>
-    <script src="./lightGallery-master/dist/lightgallery.min.js"></script>
-    <script>
-        lightGallery(document.getElementById('lightgallery'), {
-        speed: 500,
-        selector: '.anchor',
-        commentBox: true,
-        controls: true,
-        counter: true,
-        preload: 2,
-        loop: true,
-        mobileSettings :{controls: true} 
-        });
-    </script>
 </body>
 </html>
