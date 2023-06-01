@@ -227,6 +227,7 @@ article > ul {
 
 main > .offers {
     padding: 0;
+    margin: 40px 0;
 }
 
 main > .offers > .offer {
